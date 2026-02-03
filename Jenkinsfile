@@ -30,18 +30,14 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script{
-                    sh """
-                        npm install --include=dev
-                    """
+                    sh '/usr/bin/npm install --include=dev'
                 }
             }
         }
         stage('Unit Test') {
             steps {
                 script{
-                    sh """
-                        npm test
-                    """
+                    sh '/usr/bin/npm test'
                 }
             }
         }
